@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  margin-bottom: 80px;
+  /* Extra space for character overflow */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #4a90e2, #7b68ee);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: darkgrey;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-login {
+  background: transparent;
+  color: floralwhite;
+  border: 1px solid #ddd;
+}
+
+.btn-signup {
+  background: linear-gradient(135deg, #4a90e2, #7b68ee);
+  color: white;
+}
+
+/* Hero Section */
+.hero-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-container {
+  position: relative;
+  overflow: visible;
+  /* KEY: Allows character to overflow */
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  padding: 40px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 50%;
+  color: white;
+}
+
+.hero-brand {
+  margin-bottom: 10px
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Poppins';
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: 'Poppins';
+  margin-bottom: 25px;
+  opacity: 0.95;
+}
+
+.hero-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.hero-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Character Image with Overflow Effect */
+.character-image {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  height: 130%;
+  /* Taller than container - creates overflow */
+  width: auto;
+  transform: translateY(0%);
+  /* Pushes character above container */
+  z-index: 10;
+  max-width: 500px;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-container {
+    min-height: 250px;
+    padding: 30px 20px;
+  }
+
+  .hero-content {
+    max-width: 60%;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+}
